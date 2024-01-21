@@ -20,26 +20,18 @@ This project’s task was to explore different data science techniques, by perfo
 
 Firstly, we have to summarize the dataset. Fashion Mnist dataset consists of 70,000 labeled images of different clothing articles, each image is 28x28 pixels. The labels come in 10 classes as follows: 
 
-0 T-shirt/top 
-
-1 Trouser 
-
-2 Pullover 
-
-3 Dress 
-
-4 Coat 
-
-5 Sandal 
-
-6 Shirt 
-
-7 Sneaker 
-
-8 Bag 
-
-9 Ankle boot 
-
+| Label | Description |
+| --- | --- |
+| 0 | T-shirt/top |
+| 1 | Trouser |
+| 2 | Pullover |
+| 3 | Dress |
+| 4 | Coat |
+| 5 | Sandal |
+| 6 | Shirt |
+| 7 | Sneaker |
+| 8 | Bag |
+| 9 | Ankle boot |
  
 
  
