@@ -83,6 +83,9 @@ Next step is to perform clustering on our data set, this is an unsupervised lear
 
 Unfortunately, KMeans performed very poorly, it only got about 55% accuracy score.  
 
+![Alt text](imagesMnist/5.png)
+
+This plot shows which classes the KMeans algorithm has mistakenly assigned. For example, classes 2 and 4 (Pullover and Coat) were mistakenly clustered.  
 ## Classification
 
 To properly choose the best classification for this algorithm, we will be using and comparing results of 3 different algorithms. To get a better feel of model’s performance we will also be using cross_val_score, to divide our training set into folds, and perform the algorithm separately on each fold. The first one we are going to check is K Nearest Neighbors. To properly use KNN, we need to establish its hyperparameters, to do that we will use GridSearchCV. This method creates a grid for all hyperparameters under consideration and shows the best possible combination. After running this method a couple of times, the best number of neighbors seems to be 4, 6 or 8, all with similar accuracy at around 86%.  
@@ -90,6 +93,20 @@ To properly choose the best classification for this algorithm, we will be using 
 The second classification algorithm that we are going to use is called SGDClassifier, this is a linear algorithm, that relies on randomness during performing choices. Without any optimization the performance was at about 80%, which is still considerably high. This time, to optimize this algorithm we will be using the Standard Scaler method. After applying scaler on our train set, the accuracy improved to about 83%, which is a good improvement, but still worse than KNN. On the other hand, using Standard Scaler with KNN decreased the model’s performance.  
 
 Lastly, we will be using Random Forest Classifier. This algorithm performed competitively well to KNN, it also got about 86% accuracy on test folds. In the end we will choose K Nearest Neighbor as our final classifier.  
+
+![Alt text](imagesMnist/8.png)
+
+The matrix above is called the confusion matrix, it shows how many times our classifier has mistaken a given class for another class, it’s a great way of evaluating the models performance. The biggest numbers are on the main diagonal, which means that our classifier performed fairly well. Another metric that we can look at is the classification report: 
+
+![Alt text](imagesMnist/7.png)
+
+Here we have 3 very important metrics: 
+
+- Precision measures the accuracy of positive predictions 
+
+- Recall measures the ability to identify all positive instances 
+
+- F1-score is the harmonic mean of precision and recall 
 
 Finally, the accuracy score that we got on our test set is around 87%, I consider this accuracy to be really good, especially when done without any Deep Learning methods.  
 
