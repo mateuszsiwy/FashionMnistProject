@@ -81,29 +81,7 @@ As we can see, almost no information was lost, this looks good.
 
 Next step is to perform clustering on our data set, this is an unsupervised learning algorithm, so we will not be using our labels (y_train). I have decided to use Mini Batch version of KMeans, because of the size we are working with. Naturally, we will be setting the number of clusters to 10, we want every cluster to be equal to one of our original classes. Aside from size reduction, PCA also removed some of the noise from our images, which makes the clustering perform better.  
 
-Unfortunately, without proper optimazation, basic KMeans performed very poorly, it only got about 55% accuracy score. The easiest way to improve accuracy is to change the number of clusters, although 10 clusters seemed very logical. To get the correct amount we will be checking inertia and homogeneity of every number of clusters considered.  
-
- 
-
- 
-
- ![Alt text](imagesMnist/5.png)
-
- 
-
- 
-
-This plot shows which classes the KMeans algorithm has mistakenly assigned. For example, classes 2 and 4 (Pullover and Coat) were mistakenly clustered. To overcome this, we need to set the number of clusters to a higher number.  
-
-![Alt text](imagesMnist/6.png)
-
-The previously described “elbow” is at about 80% accuracy with equals to ~500 clusters, which is 50 times more than the number we originally set.  
-
-## Clustering summary
-
-To sum things up, KMeans clustering method performed really bad without proper optimization, after plotting accuracy against number of clusters we have established that the most profitable number is about 500 clusters, which is a lot than what we firstly set it to. Now let’s compare our unsupervised learning algorithm to a supervised learning algorithm.  
-
- 
+Unfortunately, KMeans performed very poorly, it only got about 55% accuracy score.  
 
 ## Classification
 
